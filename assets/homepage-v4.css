@@ -12,3 +12,6 @@ html[dir=rtl] .editorial-opening,html[dir=rtl] .editorial-body p{font-family:'No
 @media(max-width:1000px){.editorial-layout{gap:40px}.editorial-body{padding-inline-start:27px}.editorial-opening{font-size:24px}.home-page .hero-question{font-size:23px}}
 @media(max-width:700px){.home-page .hero-question{font-size:23px;line-height:1.6;max-width:360px}.homepage-editorial{padding-block:38px 36px}.editorial-layout{grid-template-columns:1fr;gap:26px}.editorial-opening{font-size:24px;line-height:1.65}.editorial-body{padding:25px 0 0;border-inline-start:0;border-top:1px solid #cfc4ba}.editorial-body p{font-size:19px;line-height:1.85}.homepage-editorial h2.eyebrow{margin-bottom:21px}html[dir=rtl] .home-page .hero-question{font-size:22px;line-height:2}html[dir=rtl] .editorial-opening,html[dir=rtl] .editorial-body p{font-size:20px;line-height:2.05}}
 @media print{.homepage-editorial{background:white}.editorial-layout{display:block}.editorial-body{border:0;padding:20px 0 0}.home-page .hero-question{color:black}}
+
+/* Multi-entry journal list. */
+.journal-list .entry-card + .entry-card{border-top:0}
