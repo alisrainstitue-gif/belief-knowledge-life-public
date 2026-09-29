@@ -1,0 +1,14 @@
+/* Homepage editorial: retain the accepted navy/cream design and artwork. */
+.home-page .hero-question{font-family:var(--serif);font-size:25px;line-height:1.6;max-width:490px;color:#f2e8df}
+.homepage-editorial{padding-block:60px 56px}
+.homepage-editorial h2.eyebrow{font-weight:400;margin-bottom:28px}
+.editorial-layout{display:grid;grid-template-columns:1fr 1.08fr;gap:72px;align-items:start}
+.editorial-opening{font:400 26px/1.65 var(--serif);color:var(--ink);margin:0;max-width:510px}
+.editorial-body{padding-inline-start:36px;border-inline-start:1px solid #cfc4ba}
+.editorial-body p{font:19px/1.9 var(--serif);margin:0;color:#504851;max-width:540px}
+.editorial-body .reading-link{margin-top:20px;color:#6a4d40;font-weight:400}
+html[dir=rtl] .home-page .hero-question{font-family:'Noto Nastaliq Urdu','Urdu Typesetting','Noto Naskh Arabic',Tahoma,serif;font-size:24px;line-height:2.05}
+html[dir=rtl] .editorial-opening,html[dir=rtl] .editorial-body p{font-family:'Noto Nastaliq Urdu','Urdu Typesetting','Noto Naskh Arabic',Tahoma,serif;font-size:21px;line-height:2.15}
+@media(max-width:1000px){.editorial-layout{gap:40px}.editorial-body{padding-inline-start:27px}.editorial-opening{font-size:24px}.home-page .hero-question{font-size:23px}}
+@media(max-width:700px){.home-page .hero-question{font-size:23px;line-height:1.6;max-width:360px}.homepage-editorial{padding-block:38px 36px}.editorial-layout{grid-template-columns:1fr;gap:26px}.editorial-opening{font-size:24px;line-height:1.65}.editorial-body{padding:25px 0 0;border-inline-start:0;border-top:1px solid #cfc4ba}.editorial-body p{font-size:19px;line-height:1.85}.homepage-editorial h2.eyebrow{margin-bottom:21px}html[dir=rtl] .home-page .hero-question{font-size:22px;line-height:2}html[dir=rtl] .editorial-opening,html[dir=rtl] .editorial-body p{font-size:20px;line-height:2.05}}
+@media print{.homepage-editorial{background:white}.editorial-layout{display:block}.editorial-body{border:0;padding:20px 0 0}.home-page .hero-question{color:black}}
