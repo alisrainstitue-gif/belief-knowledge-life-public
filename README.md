@@ -24,3 +24,9 @@ Only approved public text belongs in this repository, including its history. Do 
 No personal byline, biography, contact details, profile links, analytics, advertising, external fonts, cookies or visitor forms are included in the website files. Repository ownership, commit metadata and hosting-provider logs are separate from the displayed website; the site does not promise anonymous hosting.
 
 Use the existing typography and responsive layout for new entries. Add a separately addressable page for each approved translation and update the relevant homepage. Relative paths allow the normal pages to work under a project-site URL; the 404 page uses the project folder explicitly and should be updated if that folder changes.
+
+## Visual update
+
+The interface uses a violet, ink, ivory and apricot palette. Decorative art includes an original vector composition and a cropped AI-generated architectural illustration. These are illustrative artwork, not photographs of a real place or evidence for a claim. The full generated mockup is not part of this website.
+
+The published English entry remains unchanged. Revised English and Urdu texts require separate editorial approval. No unapproved translation or private source notes belong in public files.
