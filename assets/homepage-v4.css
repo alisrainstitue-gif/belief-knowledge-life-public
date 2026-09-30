@@ -15,3 +15,32 @@ html[dir=rtl] .editorial-opening,html[dir=rtl] .editorial-body p{font-family:'No
 
 /* Multi-entry journal list. */
 .journal-list .entry-card + .entry-card{border-top:0}
+
+
+/* Email subscription. */
+.subscribe-section{margin-top:72px;padding:68px 0 74px;border-top:1px solid #cfc4ba;background:#eee6dc}
+.subscribe-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:72px;align-items:start}
+.subscribe-copy h2{font:400 38px/1.18 var(--serif);margin:0 0 18px;color:var(--ink)}
+.subscribe-copy p{font:19px/1.8 var(--serif);margin:0;max-width:480px;color:#504851}
+.subscribe-form{position:relative;max-width:600px}
+.subscribe-email-label{display:block;margin:0 0 9px;font:600 13px/1.4 var(--sans);letter-spacing:.04em;text-transform:uppercase;color:#594e48}
+.subscribe-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}
+.subscribe-row input[type=email]{width:100%;min-width:0;border:1px solid #bbae9f;border-radius:2px;background:#faf7f2;color:#252735;font:17px/1.4 var(--sans);padding:14px 15px;outline:none}
+.subscribe-row input[type=email]:focus{border-color:#6a4d40;box-shadow:0 0 0 2px rgba(106,77,64,.12)}
+.subscribe-row button{border:1px solid #161c27;border-radius:2px;background:#161c27;color:#f7f1e9;font:600 15px/1.2 var(--sans);padding:0 21px;cursor:pointer}
+.subscribe-row button:disabled{opacity:.6;cursor:wait}
+.subscribe-consent{display:flex;gap:10px;align-items:flex-start;margin-top:17px;font:15px/1.55 var(--sans);color:#4f4844;cursor:pointer}
+.subscribe-consent input{margin-top:4px;flex:0 0 auto}
+.subscribe-privacy{font:13px/1.55 var(--sans);margin:13px 0 0;color:#756b64}
+.subscribe-status{min-height:1.5em;font:600 14px/1.5 var(--sans);margin:13px 0 0;color:#4f4844}
+.subscribe-status.is-success{color:#3d5a45}
+.subscribe-status.is-error{color:#7a3f3f}
+.subscribe-honeypot{position:absolute!important;inline-size:1px!important;block-size:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;white-space:nowrap!important}
+html[dir=rtl] .subscribe-copy h2,html[dir=rtl] .subscribe-copy p,html[dir=rtl] .subscribe-email-label,html[dir=rtl] .subscribe-consent,html[dir=rtl] .subscribe-privacy,html[dir=rtl] .subscribe-status{font-family:'Noto Nastaliq Urdu','Urdu Typesetting','Noto Naskh Arabic',Tahoma,serif}
+html[dir=rtl] .subscribe-copy h2{font-size:35px;line-height:1.65}
+html[dir=rtl] .subscribe-copy p{font-size:20px;line-height:2.05}
+html[dir=rtl] .subscribe-email-label{font-size:16px;line-height:1.8;letter-spacing:0;text-transform:none}
+html[dir=rtl] .subscribe-consent{font-size:17px;line-height:1.9}
+html[dir=rtl] .subscribe-privacy,html[dir=rtl] .subscribe-status{font-size:15px;line-height:1.9}
+@media(max-width:800px){.subscribe-section{margin-top:48px;padding:48px 0 52px}.subscribe-layout{grid-template-columns:1fr;gap:32px}.subscribe-copy h2{font-size:33px}.subscribe-row{grid-template-columns:1fr}.subscribe-row button{min-height:48px}.subscribe-copy p{font-size:18px}html[dir=rtl] .subscribe-copy h2{font-size:31px}}
+@media print{.subscribe-section{display:none}}
