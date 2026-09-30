@@ -1,0 +1,28 @@
+/* Minimal private reader feedback */
+.reader-feedback{max-width:720px;margin:48px auto 0;padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.reaction-block{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.feedback-question{font:400 22px/1.45 var(--serif);margin:0;color:var(--ink)}
+.reaction-buttons{display:flex;align-items:center;gap:10px}
+.reaction-button{width:46px;height:42px;border:1px solid #c8beb5;background:#fbf8f3;border-radius:999px;font-size:20px;cursor:pointer;display:grid;place-items:center;transition:transform .15s,background .15s,border-color .15s}
+.reaction-button:hover{transform:translateY(-1px);background:#f0e8df;border-color:#9c8271}
+.reaction-button.is-selected{background:#e8ddd2;border-color:#8e705e}
+.reaction-button:disabled{cursor:default;opacity:.55;transform:none}
+.comment-form{margin-top:32px;padding-top:28px;border-top:1px solid var(--line)}
+.comment-form h2{font:400 27px/1.35 var(--serif);margin:0 0 7px}
+.comment-form>p{margin:0 0 17px;color:var(--muted);font:16px/1.7 var(--serif)}
+.comment-form textarea{width:100%;min-height:132px;resize:vertical;border:1px solid #c9beb5;background:#fffdfa;color:var(--ink);padding:14px 15px;font:16px/1.6 var(--sans);border-radius:2px;outline:none}
+.comment-form textarea:focus{border-color:#8f705f;box-shadow:0 0 0 2px #8f705f1c}
+.feedback-privacy{font:13px/1.6 var(--sans)!important;color:#766d67!important;margin:10px 0 0!important}
+.comment-actions{display:flex;align-items:center;gap:14px;margin-top:15px}
+.feedback-submit{border:1px solid var(--night);background:var(--night);color:#f8f3ec;padding:10px 16px;border-radius:2px;cursor:pointer;font:600 13px/1.4 var(--sans)}
+.feedback-submit:disabled{opacity:.55;cursor:default}
+.feedback-status{min-width:20px;font:700 16px/1 var(--sans);color:#526455}
+.feedback-status.is-error{color:#8a4747}
+.feedback-honeypot{position:absolute!important;inline-size:1px!important;block-size:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;clip-path:inset(50%)!important;white-space:nowrap!important}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+html[dir=rtl] .feedback-question,html[dir=rtl] .comment-form h2,html[dir=rtl] .comment-form>p{font-family:'Noto Nastaliq Urdu','Urdu Typesetting','Noto Naskh Arabic',Tahoma,serif}
+html[dir=rtl] .feedback-question{font-size:21px;line-height:2}html[dir=rtl] .comment-form h2{font-size:24px;line-height:1.9}html[dir=rtl] .comment-form>p{font-size:17px;line-height:2}
+html[dir=rtl] .comment-form textarea{font-family:'Noto Nastaliq Urdu','Urdu Typesetting','Noto Naskh Arabic',Tahoma,serif;font-size:17px;line-height:2}
+html[dir=rtl] .feedback-privacy{font-family:'Noto Nastaliq Urdu','Urdu Typesetting','Noto Naskh Arabic',Tahoma,serif!important;font-size:14px!important;line-height:1.9!important}
+html[dir=rtl] .feedback-submit{font-family:'Noto Nastaliq Urdu','Urdu Typesetting','Noto Naskh Arabic',Tahoma,serif;font-size:15px;line-height:1.8}
+@media(max-width:700px){.reader-feedback{margin-top:38px;padding-block:24px}.reaction-block{align-items:flex-start}.feedback-question{width:100%}.comment-form{margin-top:26px;padding-top:24px}}
