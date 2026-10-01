@@ -1,0 +1,28 @@
+name: Assemble E02 visual
+on:
+  push:
+    branches: [role06-e02-asset-assemble]
+    paths: ['.github/e02-ready']
+permissions:
+  contents: write
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: role06-e02-asset-assemble
+      - name: Assemble approved WebP
+        run: |
+          cat .github/e02-chunks/part-* > /tmp/e02.b64
+          base64 -d /tmp/e02.b64 > assets/bkl-c1-e02-getting-closer-shared-balance.webp
+          test "$(stat -c%s assets/bkl-c1-e02-getting-closer-shared-balance.webp)" = "28322"
+          rm -rf .github/e02-chunks .github/e02-ready
+          rm .github/workflows/assemble-e02-visual.yml
+      - name: Commit asset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Assemble full approved C1-E02 visual asset"
+          git push origin role06-e02-asset-assemble
