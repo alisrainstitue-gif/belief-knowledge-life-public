@@ -1,0 +1,30 @@
+name: Restore E02 visual from Library source
+on:
+  push:
+    branches: [role05-e02-library-recovery]
+    paths: ['.github/e02-recovery-ready']
+permissions:
+  contents: write
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: role05-e02-library-recovery
+      - name: Assemble verified approved WebP
+        run: |
+          cat .github/e02-recovery/c-* > /tmp/e02.b64
+          base64 -d /tmp/e02.b64 > assets/bkl-c1-e02-getting-closer-shared-balance.webp
+          test "$(stat -c%s assets/bkl-c1-e02-getting-closer-shared-balance.webp)" = "49428"
+          echo "a64135a2dc64f83a6963f912f6eaf872a178290eb1e5880fc000f2b4cfdb3335  assets/bkl-c1-e02-getting-closer-shared-balance.webp" | sha256sum -c -
+          file assets/bkl-c1-e02-getting-closer-shared-balance.webp
+          rm -rf .github/e02-recovery .github/e02-recovery-ready
+          rm .github/workflows/restore-e02-library-source.yml
+      - name: Commit recovered asset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Restore approved E02 WebP from Library source"
+          git push origin role05-e02-library-recovery
