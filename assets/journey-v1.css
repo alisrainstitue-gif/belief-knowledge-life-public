@@ -44,3 +44,6 @@ html[dir=rtl] .home-intro-lead{font-size:27px;line-height:2.05}html[dir=rtl] .ho
 .route-intro{max-width:720px;margin:0 0 34px;color:var(--muted);font:17px/1.8 var(--serif)}
 @media(max-width:900px){.question-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:700px){.question-grid{grid-template-columns:1fr}.questions-home{padding:48px 0}.question-card{min-height:0}.journey-site .top-nav .nav-cta,.journey-home .top-nav .nav-cta{padding-inline:10px}}
+
+/* Four-entry Chapter One rail, 2 Oct 2026 */
+.journey-rail-four{grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;align-items:start}.journey-rail-four a{grid-template-columns:36px 1fr;padding-top:18px;border-top:1px solid #ffffff35}.journey-rail-four a strong{font-size:18px}.journey-rail-four .journey-connector{display:none}@media(max-width:900px){.journey-rail-four{grid-template-columns:1fr 1fr}}@media(max-width:700px){.journey-rail-four{grid-template-columns:1fr;gap:10px}.journey-rail-four a{padding-block:14px}}
