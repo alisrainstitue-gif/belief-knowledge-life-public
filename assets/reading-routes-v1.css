@@ -1,0 +1,18 @@
+/* Reading routes keep the existing palette, type and uncropped artwork. */
+.home-intro .reading-link{margin:0}
+.about-main{max-width:780px;padding-block:28px 56px}
+.about-body{max-width:680px;margin:30px auto 0;font:21px/1.85 var(--serif);color:var(--ink)}
+.about-body section+section{margin-top:40px}
+.about-body h2{font:30px/1.4 var(--serif);color:var(--accent);margin-bottom:18px}
+.about-body p{margin-bottom:25px}
+.chapter-note{max-width:900px;margin-block:30px;padding:24px;border:1px solid var(--line);border-inline-start:4px solid var(--accent);background:var(--intro)}
+.chapter-note h2{font:26px/1.5 var(--serif);margin:0 0 16px;color:var(--accent)}
+.chapter-note p{font:18px/1.85 var(--serif);margin:0 0 18px;color:var(--ink)}
+.chapter-note p:last-child{margin-bottom:0}
+html[dir=rtl] .about-body{font-size:20px;line-height:2.15}
+html[dir=rtl] .about-body h2{font-size:28px;line-height:1.95}
+html[dir=rtl] .chapter-note h2{font-size:24px;line-height:1.95}
+html[dir=rtl] .chapter-note p{font-size:19px;line-height:2.15}
+html[dir=rtl] .about-body,html[dir=rtl] .about-body h2,html[dir=rtl] .chapter-note h2,html[dir=rtl] .chapter-note p{font-family:'Noto Nastaliq Urdu','Urdu Typesetting','Noto Naskh Arabic',Tahoma,serif}
+@media(max-width:700px){.about-body{font-size:20px}.about-body h2{font-size:27px}.chapter-note{padding:20px}.chapter-note p{font-size:18px}html[dir=rtl] .about-body,html[dir=rtl] .chapter-note p{font-size:18px}}
+@media print{.about-main{padding:0}.about-body{font-size:12pt;color:black}.chapter-note{background:white;color:black;border-color:#555}}
