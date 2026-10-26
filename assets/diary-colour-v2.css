@@ -51,6 +51,7 @@ html[dir=rtl] .hero-copy>.diary-date{font:14px/2 var(--urdu)}
 .theme-links a:hover{color:var(--accent);border-color:var(--accent)}
 .thread-index{max-width:860px;margin-inline:auto}
 .diary-index.thread-index>li{display:block;padding-inline:0;background:none}
+html[dir=rtl] .diary-index.thread-index>li{padding-inline:16px}
 .thread-index h2{margin-block-end:0}
 .entry-contents li>a{display:block}
 @media(max-width:980px){.masthead-inner{grid-template-rows:auto auto}.main-navigation{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px!important}.main-navigation a{justify-content:center;text-align:center}.diary-introduction.illustrated-introduction{grid-template-columns:minmax(0,1fr) 185px;column-gap:24px}.illustrated-introduction .home-sketch{inline-size:185px}}
