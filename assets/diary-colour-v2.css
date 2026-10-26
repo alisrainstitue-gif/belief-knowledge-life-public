@@ -20,3 +20,58 @@ body{background:var(--paper)}.masthead{border-block-start:5px solid var(--teal)}
 @media(max-width:380px){.entry-sketch,.title-sketch,.home-sketch,.index-sketch{inline-size:105px;margin-inline-start:10px;padding:4px}html[dir=rtl] .entry-sketch{margin-inline-start:10px}}
 @media print{.entry-sketch{display:none}.diary-heading{border:0;padding:0}}
 @media print{:root,:root[data-theme=dark]{--paper:white;--ink:#111;--muted:#333;--accent:#111;--teal:#111;--coral:#111;--indigo:#111;--plum:#111;--ochre:#111;--line:#aaa;--field:white}.diary-index>li[data-piece]{display:block;background:white;border-inline-start:0}.diary-index .diary-date{margin-block-end:10px}.illustrated-introduction{background:white}}
+
+/* Stable bilingual pagination: short controls above full destination titles. */
+.diary-onward.diary-pagination{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.diary-pagination .pagination-series-link{grid-column:1/-1;justify-self:center;background:transparent;padding:8px 0;min-block-size:44px}
+.pagination-item{min-inline-size:0;display:grid;grid-template-rows:subgrid;grid-row:span 2;row-gap:12px}.pagination-prev{grid-column:1}.pagination-next{grid-column:2}
+.diary-pagination .pagination-control{display:flex;align-items:center;justify-content:space-between;gap:8px;inline-size:100%;min-block-size:48px;padding:7px 16px;background:var(--wash-teal);border:1px solid var(--teal);border-radius:3px;font:600 14px/1.5 var(--sans);text-decoration:none}
+.diary-pagination .pagination-control:hover{text-decoration:underline;background:var(--wash-teal)}
+.pagination-arrow{font:20px/1 var(--sans);flex:none}
+.pagination-destination{margin:0;font-size:17px;line-height:1.65;color:var(--muted);overflow-wrap:break-word}
+.pagination-next .pagination-destination{text-align:end}
+html[dir=rtl] .diary-pagination .pagination-control{font:16px/2 var(--urdu)}
+html[dir=rtl] .pagination-destination{font:17px/2.2 var(--urdu)}
+@media(max-width:600px){.diary-onward.diary-pagination{gap:18px}.diary-pagination .pagination-control{padding-inline:12px}.pagination-destination{font-size:16px}html[dir=rtl] .pagination-destination{font-size:16px}}
+@media(forced-colors:active){.diary-pagination .pagination-control{border:1px solid LinkText}}
+
+/* Editorial UX component cleanup: keep the established diary colours and type. */
+.diary-introduction.illustrated-introduction{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:24px 32px;align-items:start}
+.illustrated-introduction .hero-copy{grid-column:1;grid-row:1;min-inline-size:0}
+.illustrated-introduction .home-sketch{grid-column:2;grid-row:1;float:none;inline-size:230px;margin:0;align-self:start}
+.hero-copy>p{color:var(--ink);font-size:20px;line-height:1.85;margin-block-end:18px}
+.hero-copy>.diary-date{font:12px/1.7 var(--sans);color:var(--muted);margin-block-end:0}
+html[dir=rtl] .hero-copy>p{font:20px/2.2 var(--urdu)}
+html[dir=rtl] .hero-copy>.diary-date{font:14px/2 var(--urdu)}
+.diary-index>li[data-piece]{grid-template-columns:minmax(0,1fr) 160px;column-gap:28px}
+.diary-index>li[data-piece]>.index-copy{grid-column:1;grid-row:1}
+.diary-index>li[data-piece]>.entry-sketch{grid-column:2;grid-row:1;inline-size:160px}
+.diary-index .index-copy>.diary-date{margin:0 0 10px;color:var(--muted)}
+.theme-links a,.theme-links a[href*="quran-reading"],.theme-links a[href*="belief-conduct"],.theme-links a[href*="science-interpretation"],.theme-links a[href*="philosophy-everyday-life"]{background:transparent;border-color:var(--line);color:var(--muted);min-block-size:36px;display:inline-flex;align-items:center}
+.theme-links a:hover{color:var(--accent);border-color:var(--accent)}
+.thread-index{max-width:860px;margin-inline:auto}
+.diary-index.thread-index>li{display:block;padding-inline:0;background:none}
+.thread-index h2{margin-block-end:0}
+.entry-contents li>a{display:block}
+@media(max-width:980px){.masthead-inner{grid-template-rows:auto auto}.main-navigation{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px!important}.main-navigation a{justify-content:center;text-align:center}.diary-introduction.illustrated-introduction{grid-template-columns:minmax(0,1fr) 185px;column-gap:24px}.illustrated-introduction .home-sketch{inline-size:185px}}
+@media(max-width:700px){.diary-introduction.illustrated-introduction{grid-template-columns:minmax(0,1fr) 120px;gap:16px}.illustrated-introduction .hero-copy{display:contents}.illustrated-introduction .hero-copy>h1{grid-column:1;grid-row:1;align-self:center;margin:0}.illustrated-introduction .hero-copy>p{grid-column:1/-1}.illustrated-introduction .home-sketch{grid-column:2;grid-row:1;inline-size:120px}.hero-copy>p{font-size:18px;line-height:1.8}html[dir=rtl] .hero-copy>p{font:19px/2.2 var(--urdu)}.diary-index>li[data-piece]{grid-template-columns:minmax(0,1fr) 120px;gap:14px}.diary-index>li[data-piece]>.index-copy{display:contents}.diary-index>li[data-piece]>.index-copy>.diary-date{grid-column:1;grid-row:1;align-self:center;margin:0}.diary-index>li[data-piece]>.index-copy>:not(.diary-date){grid-column:1/-1}.diary-index>li[data-piece]>.entry-sketch{grid-column:2;grid-row:1;inline-size:120px}.diary-index h2{margin-block-end:0}.diary-index p,.diary-index .theme-links{margin-block:0}.main-navigation a{padding-inline:2px}}
+@media(max-width:380px){.diary-index>li[data-piece]{grid-template-columns:minmax(0,1fr) 100px;gap:12px}.diary-index>li[data-piece]>.entry-sketch{inline-size:100px}.diary-introduction.illustrated-introduction{grid-template-columns:minmax(0,1fr) 100px;gap:14px}.illustrated-introduction .home-sketch{inline-size:100px}}
+@media(max-width:980px){.main-navigation{align-items:stretch}}
+/* Explicit experience, recording and publication contexts for the Opening. */
+.diary-time-context{font:17px/1.7 var(--serif);color:var(--ink);margin-block:12px;max-inline-size:640px}
+.recording-note{font:12px/1.8 var(--sans);color:var(--muted);margin-block:12px 18px;clear:both}
+.opening-time-context{max-inline-size:760px;margin:0 auto 36px;padding-inline-start:20px;border-inline-start:2px solid var(--line);font-size:18px;line-height:1.85}
+.opening-time-context p{margin-block-end:0}
+.edition-history{max-inline-size:760px;margin:36px auto 0;border-block-start:1px solid var(--line);padding-block-start:12px;font:13px/1.8 var(--sans);color:var(--muted)}
+.edition-history summary{cursor:pointer;min-block-size:44px;padding-block:10px}
+.edition-history p{margin-block:10px}
+html[dir=rtl] .diary-time-context{font:17px/2.2 var(--urdu)}
+html[dir=rtl] .recording-note,html[dir=rtl] .edition-history{font:15px/2.2 var(--urdu)}
+html[dir=rtl] .opening-time-context{font:19px/2.2 var(--urdu)}
+/* Balance dense and delicate pencil compositions without cropping or editing assets. */
+[data-piece=cow-return]>.entry-sketch,[data-piece=reading-for-myself]>.entry-sketch{padding:14px}
+[data-piece=pattern]>.entry-sketch,[data-piece=sealing-agency]>.entry-sketch{padding:0}
+.diary-heading[data-piece=starting-questions]>.title-sketch{inline-size:160px}
+html[data-theme=dark] .entry-sketch{background:#d7d5c6;border:1px solid #a9b2a5;border-radius:6px}
+@media(max-width:700px){.diary-heading[data-piece=starting-questions]>.title-sketch{inline-size:105px}[data-piece=cow-return]>.entry-sketch,[data-piece=reading-for-myself]>.entry-sketch{padding:9px}}
+@media print{.diary-introduction.illustrated-introduction,.diary-index>li[data-piece],.illustrated-introduction .hero-copy,.diary-index>li[data-piece]>.index-copy{display:block}.diary-onward.diary-pagination{display:none!important}.hero-copy>p{font-size:12pt}html[dir=rtl] .hero-copy>p{font-size:13pt;line-height:2}}
